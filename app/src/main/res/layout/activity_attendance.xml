@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AttendanceActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="2dp"
+        android:id="@+id/toolbarParent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <ImageButton
+                    android:id="@+id/btnBackAttendance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_arrow_back_white_24dp"
+                    android:background="@android:color/transparent"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginRight="20dp">
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/lblWelcomeUser"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Attendance"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="55dp">
+
+            <FrameLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:padding="10dp"
+                android:background="@drawable/border"
+                >
+
+                <LinearLayout
+                    android:id="@+id/linearLay1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/lblTanggal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Wednesday, 11 January 2022"
+                        android:gravity="center"
+                        android:textSize="17dp"/>
+
+
+
+                    <TextClock
+                        android:id="@+id/idTCClock"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:text="00:00"
+                        android:textSize="70dp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btnClockIn"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Clock In/Out"
+                android:layout_marginTop="10dp"/>
+
+
+            <Button
+                android:id="@+id/btnLeaveRequest"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Leave Request" />
+
+            <Button
+                android:id="@+id/btnOvertime"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:text="Overtime" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_marginTop="20dp"
+                android:id="@+id/rvHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
